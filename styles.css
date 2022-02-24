@@ -115,11 +115,69 @@ img {
   object-fit: cover;
 }
 
+#about .row {
+  padding: 1em;
+}
+#about .image {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 10px 10px var(--blue);
+  margin-bottom: 1em;
+}
+#about p {
+  width: clamp(50%, 500px, 100%);
+  max-width: 900px;
+  padding-left: 1em;
+}
+
+p {
+  text-indent: 1em;
+}
+
+.title {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.title img {
+  object-fit: contain;
+  width: 50px;
+}
+
+#planning .content {
+  width: 80%;
+  margin: 0 auto;
+}
+#planning p {
+  width: 30%;
+  text-align: center;
+  font-size: 0.7rem;
+}
+#planning .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3em;
+  color: var(--blue);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
 @media (min-width: 600px) {
   .row {
     grid-template-columns: repeat(2, 1fr);
   }
   header > div {
     width: 80%;
+  }
+
+  #planning p {
+    width: 20%;
+    font-size: 1rem;
   }
 }
