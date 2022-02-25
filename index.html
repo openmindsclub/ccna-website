@@ -142,33 +142,30 @@
             <span id="minutes"> minutes</span>
           </div>
         </div>
-        <form action="/" method="post">
+        <form action="/" method="post" multipart="urlencoded">
           <label for="nom">Nom</label>
-          <input type="text" name="nom" id="nom" />
+          <input type="text" name="lastname" id="nom" required />
 
           <label for="prenom">Prénom</label>
-          <input type="text" name="prenom" id="prenom" />
+          <input type="text" name="firstname" id="prenom" required />
 
           <label for="mail">Adresse mail</label>
-          <input type="email" name="mail" id="mail" />
-
-          <label for="tel">Téléphone</label>
-          <input type="tel" name="tel" id="tel" />
+          <input type="email" name="email" id="mail" required />
 
           <div>
             <div>
               <label for="specialite">Specialité</label>
-              <input type="text" name="specialite" id="specialite" />
+              <input type="text" name="speciality" id="specialite" required />
             </div>
 
             <div class="level-group">
               <label for="niveau">Niveau</label>
-              <select name="niveau" id="niveau">
-                <option value="">L1</option>
-                <option value="">L2</option>
-                <option value="">L3</option>
-                <option value="">M1</option>
-                <option value="">M2</option>
+              <select name="level" id="niveau">
+                <option value="L1">L1</option>
+                <option value="L2">L2</option>
+                <option value="L3">L3</option>
+                <option value="M1">M1</option>
+                <option value="M2">M2</option>
               </select>
             </div>
           </div>
