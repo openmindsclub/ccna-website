@@ -91,12 +91,20 @@ header h1 {
   color: var(--white);
   background: var(--blue);
   width: 170px;
-  border-radius: 14px;
-  padding: 0.4em;
+  border-radius: 10px;
+  padding: 0.3em;
   font-weight: bold;
   margin: 0 1em;
   text-align: center;
+  cursor: pointer;
 }
+.button:hover {
+  /*  reverse colors */
+  filter: brightness(0.9);
+  background-color: black;
+  color: var(--white);
+}
+
 .white {
   background: var(--gray);
   color: var(--blue);
