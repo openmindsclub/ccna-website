@@ -12,7 +12,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -403,6 +405,23 @@ nav {
   font-weight: bold;
   background-color: var(--blue);
   border-radius: 7px;
+}
+
+#final {
+  margin-top: 1em;
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 600px) {

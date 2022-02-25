@@ -5,16 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+
     <title>OpenMindsClub - CCNA</title>
   </head>
   <body>
-    <!-- <nav>
-      <ul>
-        <li><a href="#planning">Planning</a></li>
-        <li><a href="#register">Inscriptions</a></li>
-        <li><a href="#about">À propos de CCNA</a></li>
-      </ul>
-    </nav> -->
     <nav role="navigation">
       <ul class="pc-nav">
         <li><a href="#planning">Planning</a></li>
@@ -33,6 +28,7 @@
         </ul>
       </div>
     </nav>
+
     <header>
       <div>
         <h1>OpenMindsClub Rejoint</h1>
@@ -41,6 +37,8 @@
           <a href="#register" class="button white">Inscrire</a>
           <a href="#about" class="button green">Decouvrir</a>
         </div>
+        <br />
+        <h1 id="final"></h1>
       </div>
     </header>
 
@@ -119,15 +117,10 @@
             Configuration
           </p>
           <p>
-            Protocols and Models OSI and TCP/IP Models  Data Link Layer
-            Ethernet Switching switching concepts Basic Switch and End Device
-            Configuration
+            Network Layer Numbering System, IPv4 Addressing and Subnetting (with
+            bonus) Basic Router Configuration
           </p>
-          <p>
-            Protocols and Models OSI and TCP/IP Models  Data Link Layer
-            Ethernet Switching switching concepts Basic Switch and End Device
-            Configuration
-          </p>
+          <p>ICMP ARP IPv6 Addressing Basics</p>
         </div>
       </div>
     </section>
@@ -144,9 +137,9 @@
           <br />
           <br />
           <div>
-            <span>40 jours</span>
-            <span>00 heures</span>
-            <span>00 minutes</span>
+            <span id="days"> jours</span>
+            <span id="hours"> heures</span>
+            <span id="minutes"> minutes</span>
           </div>
         </div>
         <form action="/" method="post">
@@ -193,17 +186,17 @@
             <p>SUIVEZ-NOUS</p>
             <br />
             <div class="icons">
-              <a href="#">
-                <img src="./assets/facebook.svg" alt="" />
+              <a href="https://web.facebook.com/openmindsclub">
+                <img src="./assets/facebook.svg" alt="facebook icon" />
               </a>
-              <a href="#">
-                <img src="./assets/instagram.svg" alt="" />
+              <a href="https://www.instagram.com/openmindsclub/">
+                <img src="./assets/instagram.svg" alt="instagram icon" />
               </a>
-              <a href="#">
-                <img src="./assets/twitter.svg" alt="" />
+              <a href="https://twitter.com/clubopenminds">
+                <img src="./assets/twitter.svg" alt="twitter icon" />
               </a>
-              <a href="#">
-                <img src="./assets/linkedin.svg" alt="" />
+              <a href="https://www.linkedin.com/company/open-minds-club/">
+                <img src="./assets/linkedin.svg" alt="linkedin icon" />
               </a>
             </div>
           </div>
@@ -219,8 +212,8 @@
         </div>
 
         <div class="logos">
-          <img src="./assets/omc.png" alt="" />
-          <img src="./assets/usthb.png" alt="" />
+          <img src="./assets/omc.png" alt="OpenMindsClub" />
+          <img src="./assets/usthb.png" alt="USTHB" />
         </div>
       </div>
       <br />
