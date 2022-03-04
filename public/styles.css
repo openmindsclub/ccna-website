@@ -41,7 +41,7 @@ h3 {
 header,
 section {
   width: 100%;
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 header {
@@ -80,6 +80,7 @@ header h1 {
   width: 170px;
   border-radius: 10px;
   padding: 0.3em;
+  font-size: 1.3em;
   font-weight: bold;
   margin: 0 1em;
   text-align: center;
@@ -118,7 +119,9 @@ img {
   min-height: auto;
 }
 #about .row {
-  padding: 1em;
+  margin: 1em 0;
+  place-items: center;
+  font-size: 1em;
 }
 #about .image {
   width: 300px;
@@ -130,7 +133,6 @@ img {
 #about p {
   width: clamp(50%, 500px, 100%);
   max-width: 900px;
-  padding-left: 1em;
 }
 
 p {
@@ -148,18 +150,21 @@ p {
 }
 
 #planning .content {
-  width: 80%;
+  width: 100%;
+}
+#planning .content img {
+  width: 90%;
+  display: block;
   margin: 0 auto;
 }
 #planning p {
-  width: 30%;
+  width: 25%;
   text-align: center;
   font-size: 0.7rem;
 }
 #planning .text {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 label {
@@ -176,8 +181,7 @@ select {
   border: 1px solid var(--border-color);
   color: var(--blue);
   font-size: 1rem;
-  font-weight: bold;
-  padding: 0.3em;
+  padding: 0.3em 1em;
   margin-bottom: 1em;
   border: 1px solid var(--blue);
   border-radius: 14px;
@@ -188,9 +192,13 @@ input:focus {
 #mail {
   width: clamp(60%, 300px, 90%);
 }
+#discord {
+  width: clamp(40%, 240px, 50%);
+}
 
 form {
   padding: 1em;
+  /* padding-left: 4em; */
   border-left: 5px solid var(--blue);
 }
 form > div {
@@ -199,21 +207,61 @@ form > div {
   justify-content: start;
   align-items: center;
 }
+form .button {
+  height: auto;
+  margin-top: 2em;
+}
 #specialite {
   width: 90%;
 }
 #niveau {
   width: 70px;
 }
+.required::after {
+  content: "*";
+  color: red;
+}
 
 #countdown {
   width: 100%;
-  padding: 2em;
+  padding: 1em 0;
   text-align: center;
+}
+#countdown > span {
+  color: var(--blue);
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+#countdown > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+#countdown > div > div {
+  min-width: 30%;
+  padding: 0.6em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--blue);
+  border-radius: 7px;
+  margin: 0 0.2em;
+}
+#countdown div span {
+  display: block;
 }
 
 #something {
   padding: 1em 0;
+}
+#something .title {
+  padding-left: 2em;
 }
 #something .banner {
   width: 100%;
@@ -222,9 +270,9 @@ form > div {
   margin: 1em 0;
 }
 #something p {
-  width: 95%;
+  width: 90%;
   text-align: center;
-  line-height: 2em;
+  line-height: 1.3em;
   margin: 0 auto;
 }
 
@@ -233,6 +281,7 @@ footer {
   color: var(--white);
   padding: 1em;
   text-align: center;
+  margin-top: 5em;
 }
 footer .left {
   display: flex;
@@ -385,28 +434,6 @@ nav {
   transform: none;
 }
 
-#countdown {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#countdown > div {
-  width: 100%;
-  margin-top: 1.4em;
-}
-#countdown > div span {
-  display: inline-block;
-  width: 70px;
-  padding: 0.2em;
-  margin: 0.2em;
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: var(--blue);
-  border-radius: 7px;
-}
-
 #final {
   margin-top: 1em;
   animation: blink 1.5s linear infinite;
@@ -432,10 +459,16 @@ nav {
   header > div {
     width: 80%;
   }
-
+  p {
+    font-size: 1.4em;
+  }
+  #planning .content {
+    width: 80%;
+    margin: 0 auto;
+  }
   #planning p {
     width: 20%;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   #register form {
@@ -447,7 +480,8 @@ nav {
     max-height: 300px;
   }
   #something p {
-    width: 80%;
+    width: 60%;
+    line-height: 1.6em;
   }
   footer .row {
     grid-template-columns: repeat(3, 1fr);
@@ -465,5 +499,18 @@ nav {
   }
   .pc-nav li {
     display: block;
+  }
+
+  #about .image {
+    width: 400px;
+    height: 400px;
+    /* aspect-ratio: 1/1; */
+  }
+  form {
+    padding-left: 4em;
+  }
+
+  #countdown > div > div {
+    max-width: 170px;
   }
 }

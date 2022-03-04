@@ -132,17 +132,24 @@
       <br />
       <div class="row">
         <div id="countdown">
-          <h3>Temps Restant</h3>
-          <br />
-          <br />
+          <span>Temps Restant</span>
           <div>
-            <span id="days"> jours</span>
-            <span id="hours"> heures</span>
-            <span id="minutes"> minutes</span>
+            <div>
+              <span id="days"> </span>
+              <span>jours</span>
+            </div>
+            <div>
+              <span id="hours"></span>
+              <span>heures</span>
+            </div>
+            <div>
+              <span id="minutes"></span>
+              <span>minutes</span>
+            </div>
           </div>
         </div>
-        <form action="/" method="post" multipart="urlencoded">
-          <label for="nom">Nom</label>
+        <form id="form">
+          <label class="required" for="nom">Nom</label>
           <input
             type="text"
             name="lastname"
@@ -151,7 +158,7 @@
             required
           />
 
-          <label for="prenom">Prénom</label>
+          <label class="required" for="prenom">Prénom</label>
           <input
             type="text"
             name="firstname"
@@ -160,7 +167,7 @@
             required
           />
 
-          <label for="mail">Adresse mail</label>
+          <label class="required" for="mail">Adresse mail</label>
           <input
             type="email"
             name="email"
@@ -192,6 +199,14 @@
               </select>
             </div>
           </div>
+
+          <label for="discord">Discord ID</label>
+          <input
+            type="text"
+            name="discord"
+            id="discord"
+            placeholder="Example#1477"
+          />
           <br />
           <input type="submit" class="button" value="Envoyer" />
         </form>
