@@ -189,7 +189,7 @@ select {
 input:focus {
   border: 1px solid var(--blue);
 }
-#mail {
+#email {
   width: clamp(60%, 300px, 90%);
 }
 #discord {
@@ -437,6 +437,18 @@ nav {
 #final {
   margin-top: 1em;
   animation: blink 1.5s linear infinite;
+}
+
+#msg {
+  margin-top: 1em;
+  font-size: 1em;
+  text-decoration: underline;
+}
+.error {
+  color: rgb(230, 31, 31);
+}
+.success {
+  color: rgb(29, 196, 29);
 }
 
 @keyframes blink {

@@ -25,5 +25,41 @@
 
 document.getElementById('form').onsubmit = (e) => {
   e.preventDefault();
-  console.log(e);
+  let firstname = document.getElementById("prenom").value;
+  let lastname = document.getElementById("nom").value;
+  let email = document.getElementById("email").value;
+  let speciality = document.getElementById("specialite").value;
+  let level = document.getElementById("niveau").value;
+  let discord = document.getElementById("discord").value;
+
+  const body = {
+    firstname,
+    lastname,
+    email,
+    speciality,
+    level,
+    discord
+  };
+
+  const msg = document.getElementById('msg');
+  msg.innerHTML = '';
+
+  fetch('/participants', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if(data.err) msg.innerHTML = data.errors[0].msg;
+      else {
+        msg.innerHTML = data.msg;
+        msg.classList.add('success');
+        document.getElementById('form').reset();
+      }
+    }
+    );
 }
