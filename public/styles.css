@@ -176,12 +176,12 @@ label {
 }
 input,
 select {
-  width: clamp(50%, 255px, 80%);
+  width: clamp(50%, 255px, 90%);
   height: 30px;
   border: 1px solid var(--border-color);
   color: var(--blue);
   font-size: 1rem;
-  padding: 0.3em 1em;
+  padding: 1em;
   margin-bottom: 1em;
   border: 1px solid var(--blue);
   border-radius: 14px;
@@ -190,10 +190,10 @@ input:focus {
   border: 1px solid var(--blue);
 }
 #email {
-  width: clamp(60%, 300px, 90%);
+  width: clamp(60%, 300px, 99%);
 }
 #discord {
-  width: clamp(40%, 240px, 50%);
+  width: clamp(40%, 240px, 60%);
 }
 
 form {
@@ -349,6 +349,7 @@ nav {
 
   -webkit-user-select: none;
   user-select: none;
+  width: 100px;
 }
 #menuToggle a {
   text-decoration: none;
