@@ -56,10 +56,13 @@ document.getElementById('form').onsubmit = (e) => {
     })
     .then(response => response.json())
     .then(data => {
-      if(data.err) msg.innerHTML = data.errors[0].msg;
+      if(data.err) {
+        msg.innerHTML = `<p class="error">${data.errors[0].msg}</p>`;
+        msg.class = 'error';
+      }
       else {
-        msg.innerHTML = data.msg;
-        msg.classList.add('success');
+        msg.innerHTML = `<p class="success">${data.msg}</p>`;
+        msg.class = 'success';
         document.getElementById('form').reset();
       }
     }

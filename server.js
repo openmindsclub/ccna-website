@@ -42,7 +42,7 @@ async (req, res, next) => {
         if (!errors.isEmpty()) return res.status(200).json({err: true, errors: errors.errors});
 
         const exists = await Participant.findOne({ email : req.body.email }).exec();
-        if(exists) return res.status(200).json({err: true, errors: [{msg: 'Email already exists..!'}]});
+        if(exists) return res.status(200).json({err: true, errors: [{msg: 'Email already registered !'}]});
         
         const newParticipant = new Participant({
             email: req.body.email.toLowerCase(),
