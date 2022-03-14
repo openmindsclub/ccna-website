@@ -177,15 +177,18 @@ label {
 input,
 select {
   width: clamp(50%, 255px, 90%);
-  height: 30px;
+  height: 35px;
   border: 1px solid var(--border-color);
   color: var(--blue);
   font-size: 1rem;
-  padding: 1em;
+  padding: 0 1em;
   margin-bottom: 1em;
   border: 1px solid var(--blue);
   border-radius: 14px;
 }
+/* select {
+  padding: 1em;
+} */
 input:focus {
   border: 1px solid var(--blue);
 }
@@ -195,7 +198,9 @@ input:focus {
 #discord {
   width: clamp(40%, 240px, 60%);
 }
-
+#niveau {
+  width: 70px;
+}
 form {
   padding: 1em;
   /* padding-left: 4em; */
@@ -213,9 +218,6 @@ form .button {
 }
 #specialite {
   width: 90%;
-}
-#niveau {
-  width: 70px;
 }
 .required::after {
   content: "*";
