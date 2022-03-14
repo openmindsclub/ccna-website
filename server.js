@@ -49,7 +49,8 @@ async (req, res, next) => {
             firstname: req.body.firstname.toLowerCase(),
             lastname: req.body.lastname.toLowerCase(),
             speciality: req.body.speciality.toLowerCase(),
-            level: req.body.level.toLowerCase()
+            level: req.body.level.toLowerCase(),
+            discord: req.body.discord.toLowerCase()
         });
 
         const result = await newParticipant.save();

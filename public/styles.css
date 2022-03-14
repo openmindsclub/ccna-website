@@ -454,6 +454,25 @@ nav {
   color: rgb(29, 196, 29);
 }
 
+#organizers .row div {
+  margin: 0 auto;
+  width: 60%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+#omc,
+#fge {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#omc {
+  background-image: url("./assets/omc-logo.png");
+}
+#fge {
+  background-image: url("./assets/fge.png");
+}
+
 @keyframes blink {
   0% {
     opacity: 0;
@@ -527,5 +546,10 @@ nav {
 
   #countdown > div > div {
     max-width: 170px;
+  }
+
+  #organizers .row div {
+    width: 50%;
+    height: auto;
   }
 }
