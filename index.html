@@ -59,6 +59,7 @@
             reconnaissant le niveau de compétence d'une personne dans le domaine
             des réseaux informatiques.
           </p>
+          <br />
           <p>
             L'examen CCNA couvre les fondamentaux de la mise en réseau, les
             services IP, les fondamentaux de la sécurité, l'automatisation et la
@@ -75,8 +76,8 @@
         <img src="./assets/3dots.png" alt="" />
         <h2>organisé par</h2>
       </div>
-      <div class="row">
-        <div id="fge"></div>
+      <div class="logo">
+        <!-- <div id="fge"></div> -->
         <div id="omc"></div>
       </div>
     </section>
@@ -118,10 +119,51 @@
 
       <br />
       <div class="content">
-        <img src="./assets/planning.png" alt="" />
+        <!-- <img src="./assets/planning.png" alt="" /> -->
         <br />
         <div class="text">
-          <p>
+          <div>
+            <h2>Day1- Construction d’un réseau simple</h2>
+            <ul>
+              <li>Les composants d'un réseau.</li>
+              <li>Les caractéristiques du Cisco IOS.</li>
+              <li>Les réseaux et le rôle des commutateurs dans le LAN.</li>
+              <li>Ethernet comme couche d'accès au réseau.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Day2- Etablissement de la connectivité Internet v4 et v6</h2>
+            <ul>
+              <li>La couche TCP/IP Internet, IPv4 et les plans d'adressage.</li>
+              <li>La couche TCP/IP: Transport et applicatif.</li>
+              <li>Configuration de base sur un routeur Cisco.</li>
+              <li>
+                Fonctionnalités, configuration et connectivité IPv6 de base.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Day3- Mise en œuvre du routage</h2>
+            <ul>
+              <li>Routage statique.</li>
+              <li>Routage dynamique et l'Open Shortest Path First (OSPF).</li>
+              <li>Réseaux locaux virtuels (VLAN) et les trunks.</li>
+            </ul>
+
+            <br />
+
+            <h2>Mise en œuvre de l’évolutivité des réseaux Campus</h2>
+            <ul>
+              <li>
+                Concepts et types de réseaux Wi-Fi et l’usage des contrôleurs de
+                réseau Wi-Fi (WLC).
+              </li>
+              <li>Overview sur l'automatisation des réseaux.</li>
+            </ul>
+          </div>
+          <!-- <p>
             Protocols and Models OSI and TCP/IP Models Data Link Layer Ethernet
             Switching switching concepts Basic Switch and End Device
             Configuration
@@ -130,7 +172,7 @@
             Network Layer Numbering System, IPv4 Addressing and Subnetting (with
             bonus) Basic Router Configuration
           </p>
-          <p>ICMP ARP IPv6 Addressing Basics</p>
+          <p>ICMP ARP IPv6 Addressing Basics</p> -->
         </div>
       </div>
     </section>
@@ -160,23 +202,23 @@
           </div>
         </div>
         <form id="form">
-          <label class="required" for="nom">Nom</label>
+          <label class="required" for="nom">Nom et Prénom</label>
           <input
             type="text"
-            name="lastname"
+            name="name"
             id="nom"
-            placeholder="Votre nom"
+            placeholder="Votre nom et prénom"
             required
           />
 
-          <label class="required" for="prenom">Prénom</label>
+          <!-- <label class="required" for="prenom">Prénom</label>
           <input
-            type="text"
+            type="textarea"
             name="firstname"
             id="prenom"
             placeholder="Votre prénom"
             required
-          />
+          /> -->
 
           <label class="required" for="mail">Adresse mail</label>
           <input
@@ -217,6 +259,17 @@
             id="discord"
             placeholder="Example#1477"
           />
+
+          <label class="required" for="motivation">Motivation</label>
+          <textarea
+            class="motivation"
+            name="morivation"
+            id="motivation"
+            cols="30"
+            rows="10"
+          ></textarea>
+
+          <br />
           <div id="msg"></div>
           <br />
           <input type="submit" class="button" value="S'inscrire" />

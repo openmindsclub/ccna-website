@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const participantSchema = new Schema({
-    firstname: {
+    fullname: {
         type: String,
         trim: true,
         required: true
     },
-    lastname: {
-        type: String,
-        trim: true,
-        required: true
-    },
+    // lastname: {
+    //     type: String,
+    //     trim: true,
+    //     required: true
+    // },
     email: {
         type: String,
         trim: true,
@@ -29,6 +29,10 @@ const participantSchema = new Schema({
         required: false,
     },
     discord: {
+        type: String,
+        trim: true,
+    },
+    motivation: {
         type: String,
         trim: true,
     },

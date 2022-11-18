@@ -26,15 +26,15 @@ res.sendFile(path.join(__dirname, '/index.html'));
 })
 
 app.post('/participants', [
-    check('email', 'email is required').not().isEmpty(),
-    check('email', 'Invalid email !')
-                    .isEmail().isLength({ min: 10, max: 30 }),
-    check('firstname', 'Firstname is required').not().isEmpty(),
-    check('firstname', 'FirstName length should be 3 to 30 characters')
-                    .isLength({ min: 3, max: 30 }),
-    check('lastname', 'Lastname is required').not().isEmpty(),
-    check('lastname', 'LastName length should be 3 to 30 characters')
-                    .isLength({ min: 3, max: 30 })
+    check('email', 'email is required !').not().isEmpty(),
+    check('email', 'Invalid email !').isEmail().isLength({ min: 10, max: 30 }),
+    check('fullname', 'fullname is required !').not().isEmpty(),
+    check('fullname', 'Please enter your real name !').isLength({ min: 5, max: 50 }),
+    check('motivation', 'Motivation is required !').not().isEmpty(),
+    // check('motivation', 'FirstName length should be 3 to 30 characters').isLength({ min: 5, max: 50 }),
+    // check('lastname', 'Lastname is required').not().isEmpty(),
+    // check('lastname', 'LastName length should be 3 to 30 characters')
+    //                 .isLength({ min: 3, max: 30 })
 ], 
 async (req, res, next) => {
     try {
@@ -46,11 +46,12 @@ async (req, res, next) => {
         
         const newParticipant = new Participant({
             email: req.body.email.toLowerCase(),
-            firstname: req.body.firstname.toLowerCase(),
-            lastname: req.body.lastname.toLowerCase(),
+            fullname: req.body.fullname.toLowerCase(),
+            // lastname: req.body.lastname.toLowerCase(),
             speciality: req.body.speciality.toLowerCase(),
             level: req.body.level.toLowerCase(),
-            discord: req.body.discord.toLowerCase()
+            discord: req.body.discord.toLowerCase(),
+            motivation: req.body.motivation.toLowerCase()
         });
 
         const result = await newParticipant.save();

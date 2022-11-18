@@ -4,7 +4,7 @@
       hour = minute * 60,
       day = hour * 24;
 
-    const countDown = new Date(2022, 2, 16, 12, 0, 0).getTime();
+    const countDown = new Date(2022, 10, 21, 10, 0, 0).getTime();
     const x = setInterval(() => {
       const now = new Date().getTime();
       distance = countDown - now;
@@ -27,20 +27,20 @@
 
 document.getElementById('form').onsubmit = (e) => {
   e.preventDefault();
-  let firstname = document.getElementById("prenom").value;
-  let lastname = document.getElementById("nom").value;
+  let fullname = document.getElementById("nom").value;
   let email = document.getElementById("email").value;
   let speciality = document.getElementById("specialite").value;
   let level = document.getElementById("niveau").value;
   let discord = document.getElementById("discord").value;
+  let motivation = document.getElementById('motivation').value;
 
   const body = {
-    firstname,
-    lastname,
+    fullname,
     email,
     speciality,
     level,
-    discord
+    discord,
+    motivation
   };
 
   const msg = document.getElementById('msg');
